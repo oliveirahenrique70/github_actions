@@ -20,7 +20,7 @@ jobs:
         run: echo "Docker build CI"
   Tests:
     needs: ["CI"]
-    runs-on: unbunto-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Run Tests
         run: echo "Run app tests"
