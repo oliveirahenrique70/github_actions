@@ -18,6 +18,8 @@ jobs:
         run: ls -l
       - name: Docker Build
         run: echo "Docker build CI"
+      - name: Tests
+        run: echo "Run app tests"
   CD:
     runs-on: ubuntu-latest
     needs: ["CI"]
