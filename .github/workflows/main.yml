@@ -19,13 +19,14 @@ jobs:
       - name: Docker Build
         run: echo "Docker build CI"
   Tests:
+    needs: ["CI"]
     runs-on: unbunto-latest
     steps:
       - name: Run Tests
         run: echo "Run app tests"
   CD:
     runs-on: ubuntu-latest
-    needs: ["CI"]
+    needs: ["CI", "Tests"]
     steps:
       - name: Deploy App
         run: echo "Deploy App"
