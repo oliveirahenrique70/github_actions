@@ -9,5 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: ls Command
+        run: ls -l
       - name: Docker Build
         run: echo "Docker build CI"
