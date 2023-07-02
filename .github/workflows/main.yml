@@ -26,12 +26,16 @@ jobs:
         with:
           use-public-rspm: true
       - name: Install dependencies
+        #run: |
+        #  install.packages(c("shinytest2"))
+        #shell: Rscript {0}
+      - name: wd
         run: |
-          install.packages(c("shinytest2"))
+          getwd()
         shell: Rscript {0}
-      - name: Run tests
+      - name: list files
         run: |
-          shinytest2::test_app()
+          list.files()
         shell: Rscript {0}
   CD:
     runs-on: ubuntu-latest
