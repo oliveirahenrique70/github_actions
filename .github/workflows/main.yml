@@ -26,17 +26,13 @@ jobs:
       - uses: r-lib/actions/setup-r@v2
         with:
           use-public-rspm: true
-      #- name: Install dependencies
-        #run: |
-        #  install.packages(c("shinytest2"))
-        #shell: Rscript {0}
-      - name: wd
+      - name: Install dependencies
         run: |
-          getwd()
+          install.packages(c("shinytest2"))
         shell: Rscript {0}
-      - name: list files
+      - name: Run tests
         run: |
-          list.files()
+          source("tests/testthat.R")
         shell: Rscript {0}
   CD:
     runs-on: ubuntu-latest
