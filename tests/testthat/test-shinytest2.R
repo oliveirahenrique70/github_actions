@@ -24,9 +24,9 @@ test_that("Bins input value reactivity", {
     set_bins = 50
   )
 
-  # app$click(
-  #   input = "submit"
-  # )
+  app$click(
+    input = "submit"
+  )
 
   bins <- app$get_value(
     output = "print_bins"
