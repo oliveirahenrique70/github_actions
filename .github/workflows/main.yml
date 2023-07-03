@@ -28,7 +28,7 @@ jobs:
           use-public-rspm: true
       - name: Install dependencies
         run: |
-          install.packages(c("shinytest2", "lintr))
+          install.packages(c("shinytest2", "lintr"))
         shell: Rscript {0}
       - name: Check style
         run: |
