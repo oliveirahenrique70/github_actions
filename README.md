@@ -1,8 +1,5 @@
 # Git Hub Actions
 
-Use GitHub Actions for CI/CD abd testing of a R Shiny App
+Create a simple GitHub Actions flow to demonstrate a CI/CD workflow and testing of a R Shiny App.
 
-Made by
-
-*Henrique Oliveira*
-[hodatascience](https://apps.hodatascience.com.br/)
+Made by *Henrique Oliveira*, for more access [apps.hodatascience.com.br](https://apps.hodatascience.com.br/)
