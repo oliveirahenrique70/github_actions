@@ -1,6 +1,6 @@
 library(shiny)
 
-# Define UI for application that draws a histogram
+#### UI ####
 ui <- fluidPage(
 
     titlePanel("Old Faithful Geyser Data"),
@@ -18,12 +18,12 @@ ui <- fluidPage(
 
         mainPanel(
            plotOutput("dist_plot"),
-           textOutput("print_bins")
+           hr(),
+           h2("Number of bins:",textOutput("print_bins", inline = TRUE))
         )
     )
 )
 
-# Define server logic required to draw a histogram
 server <- function(input, output) {
 
   observeEvent(input$submit, {
@@ -44,5 +44,4 @@ server <- function(input, output) {
   })
 }
 
-# Run the application 
 shinyApp(ui = ui, server = server)
